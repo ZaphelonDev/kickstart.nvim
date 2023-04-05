@@ -165,6 +165,11 @@ require('lazy').setup({
 -- Unload netrw and do nvim-tree setup
 vim.opt.termguicolors = true
 require("nvim-tree").setup()
+
+-- Make line numbers default
+vim.wo.number = true
+
+-- Enable nvim-tree
 local nvim_tree_api = require("nvim-tree.api")
 nvim_tree_api.tree.toggle()
 
@@ -173,9 +178,6 @@ nvim_tree_api.tree.toggle()
 
 -- Set highlight on search
 vim.o.hlsearch = false
-
--- Make line numbers default
-vim.wo.number = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
